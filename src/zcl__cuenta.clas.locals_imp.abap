@@ -51,7 +51,7 @@ PUBLIC SECTION.
   ENDMETHOD.
 
   METHOD set_nombre.
-    " atributo = paraemtro de entrada
+    " atributo = parametro de entrada
     nombre = i_nombre.
   ENDMETHOD.
 

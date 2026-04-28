@@ -22,6 +22,7 @@ DATA(lo_cuenta) = NEW zcl_demo_cuenta(
 i_nombre = ' Carlos'
 i_saldo  = 1000 ).
 
+out->write( |La cuenta de { lo_cuenta->nombre } tiene { lo_cuenta->saldo } € | ).
 
 
 lo_cuenta->mostrar_estado( out ).
