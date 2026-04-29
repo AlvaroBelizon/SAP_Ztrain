@@ -16,7 +16,7 @@ CLASS zcl_consola_08 IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
-
+*BOMBILLA
 *    DATA lo_bombilla TYPE REF TO zcl_bombilla_00.
 *
 *    DATA(lo_bombilla) = NEW zcl_bombillaa( 'Salón' ).
@@ -78,6 +78,7 @@ CLASS zcl_consola_08 IMPLEMENTATION.
 *                |  Estado: { lv_texto }| ).
 *********************************************************************
 
+***CUADRO
 *DATA(lo_cuadro1) = NEW zcl_cuadro_08(
 * i_titulo = 'La maja desnuda'
 * i_anyo = 1800 ).
@@ -94,9 +95,11 @@ CLASS zcl_consola_08 IMPLEMENTATION.
 ***********************************************************************
 
 
+*Calculadora
+
   DATA(lo_calculadora) = NEW zcl_calculadora(
     i_valor  = 0
-    i_nombre = 'Manolo'
+    i_nombre = 'Alvarinho'
   ).
 
   DATA lv_valor TYPE i.
@@ -125,20 +128,14 @@ out->write( |Calculadora de { lv_nombre } Pantalla: { lv_valor }| ).
   out->write( |Calculadora de { lv_nombre } Pantalla: { lv_valor }| ).
 
 "dividir entre 5
- lo_calculadora->dividir(
-  i_valor = 5
-  out     = out
-).
-lo_calculadora->get_valor( IMPORTING o_valor = lv_valor ).
-out->write( |Calculadora de { lv_nombre } Pantalla: { lv_valor }| ).
+ lo_calculadora->dividir( i_valor = 5 out = out ).
+ lo_calculadora->get_valor( IMPORTING o_valor = lv_valor ).
+ out->write( |Calculadora de { lv_nombre } Pantalla: { lv_valor }| ).
 
 "dividir entre 0
-lo_calculadora->dividir(
-  i_valor = 0
-  out     = out
-).
-lo_calculadora->get_valor( IMPORTING o_valor = lv_valor ).
-out->write( |Calculadora de { lv_nombre } Pantalla: { lv_valor }| ).
+ lo_calculadora->dividir( i_valor = 0 out = out ).
+ lo_calculadora->get_valor( IMPORTING o_valor = lv_valor ).
+ out->write( |Calculadora de { lv_nombre } Pantalla: { lv_valor }| ).
 
   "pulsar reset
   lo_calculadora->reset( ).
