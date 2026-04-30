@@ -150,6 +150,7 @@ CLASS zcl_test_productos_08 IMPLEMENTATION.
       stock       = 100
       activo      = abap_true ).
 
+
     lo_producto->insertar(
       EXPORTING
         i_producto = ls_producto
@@ -195,5 +196,7 @@ ELSE.
   out->write( 'Producto no encontrado' ).
 ENDIF.
 ENDMETHOD.
+
+
 
 ENDCLASS.
