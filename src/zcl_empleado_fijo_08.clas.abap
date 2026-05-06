@@ -12,8 +12,6 @@ CLASS zcl_empleado_fijo_08 DEFINITION
 
   PUBLIC SECTION.
 
-
-
   METHODS:
       constructor
         IMPORTING
@@ -43,7 +41,7 @@ CLASS zcl_empleado_fijo_08 IMPLEMENTATION.
 
 METHOD constructor.
     super->constructor(
-      i_nombre       = i_nombre
+       i_nombre       = i_nombre
       i_dni          = i_dni
       i_salario_base = i_salario_base
     ).

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Qué entidad quieres exponer como servicio.'
+define service ZUI_BEBIDAS_08 {
+  expose ZC_BEBIDAS_08 as Bebidas;
+}
