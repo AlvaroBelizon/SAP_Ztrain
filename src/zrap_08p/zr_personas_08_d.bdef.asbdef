@@ -1,0 +1,56 @@
+managed implementation in class ZBP_R_PERSONAS_08_D unique;
+strict ( 2 );
+extensible;
+define behavior for ZR_PERSONAS_08_D alias ZrPersonas08D
+persistent table ZPERSONAS_08_D
+extensible
+etag master Locallastchangedat
+lock master
+authorization master( global )
+{
+  field ( mandatory : create )
+   Personid;
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Personid;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for ZPERSONAS_08_D corresponding extensible
+  {
+    Personid = PERSONID;
+    Firstname = FIRSTNAME;
+    Lastname = LASTNAME;
+    Birthdate = BIRTHDATE;
+    Gender = GENDER;
+    Email = EMAIL;
+    Phone = PHONE;
+    Country = COUNTRY;
+    Street = STREET;
+    City = CITY;
+    Postalcode = POSTALCODE;
+    Isactive = ISACTIVE;
+    Createdby = CREATEDBY;
+    Createdat = CREATEDAT;
+    Lastchangedby = LASTCHANGEDBY;
+    Lastchangedat = LASTCHANGEDAT;
+    Locallastchangedat = LOCALLASTCHANGEDAT;
+    Draftentitycreationdatetime = DRAFTENTITYCREATIONDATETIME;
+    Draftentitylastchangedatetime = DRAFTENTITYLASTCHANGEDATETIME;
+    Draftadministrativedatauuid = DRAFTADMINISTRATIVEDATAUUID;
+    Draftentityoperationcode = DRAFTENTITYOPERATIONCODE;
+    Hasactiveentity = HASACTIVEENTITY;
+    Draftfieldchanges = DRAFTFIELDCHANGES;
+  }
+
+}
